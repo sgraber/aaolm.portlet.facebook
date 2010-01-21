@@ -8,6 +8,7 @@ from zope.formlib import form
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from aaolm.portlet.facebook import FacebookFanPagePortletMessageFactory as _
+from Acquisition import aq_inner
 
 
 class IFacebookFanPagePortlet(IPortletDataProvider):
@@ -27,7 +28,7 @@ class IFacebookFanPagePortlet(IPortletDataProvider):
     #                              description=_(u"A field to use"),
     #                              required=True)
 
-    javascript = schema.BLAH(title=_(u"Facebook Widget Code"),
+    javascript = schema.Text(title=_(u"Facebook Widget Code"),
                              description=(u"Enter your Facebook Fan Page javascript in the text field below."),
                              required=True)
 
