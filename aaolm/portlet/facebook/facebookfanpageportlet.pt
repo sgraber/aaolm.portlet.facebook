@@ -1,5 +1,5 @@
 <div id="facebook-portlet"
-     class="portlet portletFacebookFanPagePortlet"
+     class="portletFacebookFanPagePortlet"
      i18n:domain="aaolm.portlet.facebook"
      tal:content="structure view/javascript">
 
