@@ -1,20 +1,8 @@
-<dl class="portlet portletFacebookFanPagePortlet"
-    i18n:domain="aaolm.portlet.facebook">
+<div id="facebook-portlet"
+     class="portlet portletFacebookFanPagePortlet"
+     i18n:domain="aaolm.portlet.facebook"
+     tal:content="structure view/javascript">
 
-    <dt class="portletHeader">
-        <span class="portletTopLeft"></span>
-        Header
-        <span class="portletTopRight"></span>
-    </dt>
+    Facebook Javascript Goes Here
 
-    <dd class="portletItem odd">
-        Body text
-    </dd>
-
-    <dd class="portletFooter">
-        <span class="portletBottomLeft"></span>
-        Footer
-        <span class="portletBottomRight"></span>
-    </dd>
-
-</dl>
+</div>
