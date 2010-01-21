@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="aaolm.portlet.facebook.FacebookFanPagePortlet"
+   title="Facebook Fan Page Portlet"
+   description="Facebook Fan Page Portlet for Advanced Aquarist"
+   />
+
+</portlets>

@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="aaolm.portlet.facebook">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <genericsetup:registerProfile
+       name="default"
+       title="Facebook Fan Page Portlet"
+       directory="profiles/default"
+       description="Facebook Fan Page Portlet for Advanced Aquarist"
+       provides="Products.GenericSetup.interfaces.EXTENSION"
+       />
+
+     <!-- Register the portlet -->
+
+     <!-- If the portlet has no configurable parameters, you can remove
+          the EditForm declaration in facebookfanpageportlet.py and delete
+          the 'editview' attribute from this statement.
+       -->
+
+     <plone:portlet
+         name="aaolm.portlet.facebook.FacebookFanPagePortlet"
+         interface=".facebookfanpageportlet.IFacebookFanPagePortlet"
+         assignment=".facebookfanpageportlet.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".facebookfanpageportlet.Renderer"
+         addview=".facebookfanpageportlet.AddForm"
+         editview=".facebookfanpageportlet.EditForm"
+         />
+
+</configure>

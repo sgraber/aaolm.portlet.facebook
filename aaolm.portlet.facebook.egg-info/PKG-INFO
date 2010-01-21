@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: aaolm.portlet.facebook
+Version: 0.1dev
+Summary: Facebook Fan Page Portlet for Advanced Aquarist
+Home-page: http://www.advancedaquarist.com/
+Author: Shane Graber
+Author-email: sgraber@gmail.com
+License: GPL
+Description: Introduction
+        ============
+        
+        Facebook Fan Page Portlet for Advanced Aquarist
+        
+        Changelog
+        =========
+        
+        0.1 (xxxx-xx-xx)
+        ----------------
+        
+        * Initial release
+        
+Keywords: plone facebook fan-page portlet
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
