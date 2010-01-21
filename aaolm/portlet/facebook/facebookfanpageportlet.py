@@ -27,6 +27,10 @@ class IFacebookFanPagePortlet(IPortletDataProvider):
     #                              description=_(u"A field to use"),
     #                              required=True)
 
+    javascript = schema.BLAH(title=_(u"Facebook Widget Code"),
+                             description=(u"Enter your Facebook Fan Page javascript in the text field below."),
+                             required=True)
+
 
 class Assignment(base.Assignment):
     """Portlet assignment.
@@ -45,8 +49,10 @@ class Assignment(base.Assignment):
     # def __init__(self, some_field=u""):
     #    self.some_field = some_field
 
-    def __init__(self):
-        pass
+    javascript = ''
+    
+    def __init__(self, javascript=''):
+        self.javascript = javascript
 
     @property
     def title(self):
@@ -66,6 +72,16 @@ class Renderer(base.Renderer):
 
     render = ViewPageTemplateFile('facebookfanpageportlet.pt')
 
+    def __init__(self, *args):
+        base.Renderer.__init__(self, *args)
+        context = aq_inner(self.context)
+
+    @property
+    def javascript(self):
+        """Get the Facebook javascript from the portlet"""
+        data = self.data
+        javascript = data.javascript
+        return javascript # has to be a string!!!
 
 class AddForm(base.AddForm):
     """Portlet add form.
@@ -75,6 +91,9 @@ class AddForm(base.AddForm):
     constructs the assignment that is being added.
     """
     form_fields = form.Fields(IFacebookFanPagePortlet)
+    
+    label = _(u"Add Facebook Fan Page Code")
+    description = _(u"Add your Facebook Fan Page javascript in the text field below.")   
 
     def create(self, data):
         return Assignment(**data)
@@ -102,3 +121,6 @@ class EditForm(base.EditForm):
     zope.formlib which fields to display.
     """
     form_fields = form.Fields(IFacebookFanPagePortlet)
+    
+    label = _(u"Edit Facebook Fan Page Code")
+    description = _(u"Edit your Facebook Fan Page javascript in the text field below.")
