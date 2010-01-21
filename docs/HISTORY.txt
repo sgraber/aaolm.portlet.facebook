@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1 (xxxx-xx-xx)
+1.0 (2010-01-20)
 ----------------
 
 * Initial release

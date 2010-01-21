@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: aaolm.portlet.facebook
-Version: 0.1dev
+Version: 1.0
 Summary: Facebook Fan Page Portlet for Advanced Aquarist
 Home-page: http://www.advancedaquarist.com/
 Author: Shane Graber
@@ -14,7 +14,7 @@ Description: Introduction
         Changelog
         =========
         
-        0.1 (xxxx-xx-xx)
+        0.1 (2010-01-20)
         ----------------
         
         * Initial release
