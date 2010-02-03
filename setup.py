@@ -25,6 +25,7 @@ setup(name='aaolm.portlet.facebook',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'z3c.autoinclude',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
