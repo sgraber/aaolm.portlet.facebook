@@ -7,6 +7,8 @@ setup(name='aaolm.portlet.facebook',
       version=version,
       description="Facebook Fan Page Portlet for Advanced Aquarist",
       long_description=open("README.txt").read() + "\n" +
+                       open(os.path.join("docs", "INSTALL.txt")).read()  + "\n" +
+                       open(os.path.join("docs", "LICENSE.txt")).read()  + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
