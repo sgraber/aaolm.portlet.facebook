@@ -23,14 +23,6 @@ recipe to manage your project, you can do this:
         ...
         aaolm.portlet.facebook
 
-  * Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
-
-    [instance]
-    recipe = plone.recipe.zope2instance
-    ...
-    zcml =
-        aaolm.portlet.facebook
-
   * Re-run buildout, e.g. with:
 
     $ ./bin/buildout
